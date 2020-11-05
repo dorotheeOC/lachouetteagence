@@ -37,7 +37,6 @@ blockquote p::after {
     width: 100%;
     clear: both;
     background: 50% 50% no-repeat;
-    padding: 0 50px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -515,7 +514,9 @@ button {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
 }
-
+#form_1 {
+    margin: 1rem;
+}
 .scrollToTop {
     width: 40px;
     height: 40px;
@@ -644,17 +645,15 @@ a[data-lightbox]:hover img {
     color: rgba(0, 0, 0, .5);
     background: none;
 }
-
+a, .footer {
+    color: #333333; 
+}
 h1,
-h2,
 h3,
 h4,
 h5,
 h6,
-p,
-label,
-.btn,
-a {
+label {
     font-family: "helvetica";
     font-weight: 400;
     color: #575757!important;
@@ -683,7 +682,7 @@ a {
 }
 
 p {
-    font-size: 11px;
+    font-size: 1em;
 }
 
 .tight-width-whitespace {
@@ -692,7 +691,7 @@ p {
 }
 
 .h1 {
-    font-size: 20px;
+    font-size: 3em;
     font-family: "Open Sans";
 }
 
@@ -707,16 +706,17 @@ p {
 
 .social {
     max-width: 400px;
-    margin: auto auto auto auto;
+    margin: 0 auto 4rem;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 2em;
     line-height: 1.4em;
+    color: #333333
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 1.4em;
     text-transform: uppercase;
     font-weight: 700;
     color: #333333!important;
@@ -747,6 +747,7 @@ h4 {
 
 .portfolio-thumb {
     margin-bottom: 24px;
+    margin: auto;
 }
 
 .portfolio-row {
@@ -759,7 +760,7 @@ h4 {
 }
 
 .black-background {
-    background-color: rgba(165, 147, 99, 0.7);
+    background-color: rgba(55,52,151,0.8);
     padding: 40px 40px 40px 40px;
 }
 
@@ -773,11 +774,11 @@ h4 {
 }
 
 .bgc-dark-slate-blue {
-    background-color: #364577;
+    background-color: rgba(55,52,151,0.5);
 }
 
 .bgc-atomic-tangerine {
-    background-color: #F3976C;
+    background-image: linear-gradient(#B65E41, #F3976C);
 }
 
 .tc-white {
@@ -785,7 +786,7 @@ h4 {
 }
 
 .btn-atomic-tangerine {
-    background: #F3976C;
+    background-image: linear-gradient(-15deg, #F3976C, #B65E41);
     color: #FFFFFF!important;
 }
 
@@ -831,6 +832,11 @@ h4 {
     background-image: url("img/image-de-presentation.jpg");
 }
 
+.uppercase {
+    text-transform: uppercase;
+    line-height: 2em;
+}
+
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
@@ -854,13 +860,13 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -879,8 +885,8 @@ h4 {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -890,8 +896,8 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
     }
 }
 
@@ -1031,6 +1037,20 @@ h4 {
     .blocsapp-device-iphone5 img {
         width: 180px;
         height: 320px;
+    }
+    .footer-nav {
+        text-align: center;
+        line-height: 1.5em;
+    }
+    .footer-nav ul {
+        padding: 0;
+    }
+    .footer-nav ul li {
+        list-style: none;
+    }
+    #bloc-3-what-i-do,
+    #bloc-3-what-i-do::before{
+        background: none;
     }
 }
 
