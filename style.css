@@ -837,6 +837,12 @@ h4 {
     line-height: 2em;
 }
 
+#map {
+    width: 37rem;
+    height: 37rem;
+    margin: 0 1rem;
+}
+
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
@@ -1052,6 +1058,11 @@ h4 {
     #bloc-3-what-i-do::before{
         background: none;
     }
+    #map {
+    width: 80%;
+    height: 25rem;
+    margin: 0 auto;
+}
 }
 
 @media (max-width: 400px) {
